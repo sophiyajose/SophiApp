@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="SophiApp.MainPage">
+  <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+  <Grid Padding="3,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="White">
+
+       <Grid.RowDefinitions>
+         <RowDefinition Height="2*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+       <Entry x:Name="entryLabel" FontSize="48" FontAttributes="Bold" BackgroundColor="White"
+              TextColor="Black"
+              Grid.ColumnSpan="3" Keyboard="Numeric">
+           
+            </Entry>
+              
+       <Button Text="C" Grid.Row="1" Grid.Column="0"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="ClearClicked" />
+       <Button Text="+" Grid.Row="1" Grid.Column="1"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OperatorClicked" />
+       <Button Text="-" Grid.Row="1" Grid.Column="2"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OperatorClicked" />
+
+       <Button Text="*" Grid.Row="2" Grid.Column="0"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OperatorClicked" />
+       <Button Text="/" Grid.Row="2" Grid.Column="1"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="OperatorClicked" />
+       <Button Text="=" Grid.Row="2" Grid.Column="2"
+               BackgroundColor="Silver" TextColor="Black"
+               FontSize="36" BorderRadius="0" Clicked="EqualtoClicked" />
+    </Grid>
+</ContentPage>
+
+      
